@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "start": "nust start" 
+    "start": "nuxt start" 
   },
   "dependencies": {
     "@nuxt/icon": "^1.5.4",
