@@ -1,5 +1,6 @@
 <template>
   <div>
+    {{ $config.public.VITE_GOOGLE_KEY }}
     <!--Documented on -
     Nuxt options: https://scripts.nuxt.com/scripts/content/google-maps
     Google maps: https://developers.google.com/maps/documentation/embed/embedding-map
@@ -27,5 +28,7 @@ const props = defineProps({
     required: true
   }
 })
-const location = `https://www.google.com/maps/embed/v1/place?key=AIzaSyD4w4Gqf4E5o0fYMobX477ucq70r74iGlA&q=${props.y},${props.x}&zoom=17"`
+const runtimeConfig = useRuntimeConfig()
+const key = runtimeConfig.NUXT_GOOGLE_KEY_SECRET
+const location = `https://www.google.com/maps/embed/v1/place?key=${key}&q=${props.y},${props.x}&zoom=17"`
 </script>

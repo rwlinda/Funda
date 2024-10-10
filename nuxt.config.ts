@@ -27,5 +27,9 @@ export default defineNuxtConfig({
     compilerOptions: {
       isCustomElement: (tag) => ['swiper-container', 'swiper-slide'].includes(tag),
     },
-  }
+  },
+  runtimeConfig: {
+    NUXT_FUNDA_KEY_SECRET: process.env.NUXT_FUNDA_KEY_SECRET,
+    NUXT_GOOGLE_KEY_SECRET: process.env.NUXT_GOOGLE_KEY_SECRET
+  },
 })
