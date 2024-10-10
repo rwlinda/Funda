@@ -7,7 +7,8 @@
     <a href="/kopen">
       <img src="/assets/logo.svg" alt="Funda logo" class="h-8 mr-8" />
     </a>
-    <ul class="text-white" :class="[menuVisible ? 'fixed w-full h-full top-[3.75rem] z-10 left-0 bg-primary sm:flex sm:h-auto sm:relative border-t border-white' : 'hidden sm:flex h-full']">
+    <ul class="text-white" 
+      :class="[menuVisible ? 'fixed w-full h-full top-[3.75rem] sm:top-0 z-10 left-0 bg-primary sm:flex sm:h-auto sm:relative border-t sm:border-t-0 border-white' : 'hidden sm:flex h-full']">
       <menu-item link="/kopen" @click="toggleMenu">Kopen</menu-item>
       <menu-item link="/huren" @click="toggleMenu">Huren</menu-item>
       <menu-item link="/verkopen" @click="toggleMenu">Verkopen</menu-item> 
