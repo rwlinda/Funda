@@ -1,6 +1,5 @@
 <template>
-  <div v-if="isOpen">
-    <div class="fixed h-screen w-screen z-10 bg-white top-0 left-0 sm:p-8"></div>
+  <div v-if="isOpen" class="fixed h-screen w-screen z-10 top-0 left-0 bg-white sm:p-8">
       <galleryElement :images="images" class="z-20" />
       <button 
         @click="emit('modal-close')" 
