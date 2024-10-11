@@ -1,13 +1,14 @@
 <template>
-  <div v-if="isOpen" class="fixed h-full w-full z-40 bg-white top-0 left-0 sm:p-8">
-    <galleryElement :images="images" />
-    <button 
-      @click="emit('modal-close')" 
-      class="absolute bg-primary text-white font-bold top-8 right-16 px-4 py-2 rounded-xl hover:cursor-pointer z-50
-    ">
-    Sluiten
-  </button>
-  </div>
+  <div v-if="isOpen">
+    <div class="fixed h-screen w-screen z-10 bg-white top-0 left-0 sm:p-8"></div>
+      <galleryElement :images="images" class="z-20" />
+      <button 
+        @click="emit('modal-close')" 
+        class="p-4 hover:cursor-pointer z-20 top-0 right-4 absolute
+      ">
+        <nuxt-icon name="icons:xmark" class="text-2xl" />
+      </button>
+    </div>
 </template>
 
 <script setup>

@@ -4,8 +4,11 @@
     :centered-slides="true"
     :navigation="true"
     :pagination="true">
-    <swiper-slide v-for="(image) in largeImages" :key="image.Url">
-      <img :src="image.Url" class="mx-auto"/>
+    <swiper-slide v-for="(image) in mediumImages" :key="image.UrlSecure" class="sm:hidden">
+      <img :src="image.UrlSecure" class="mx-auto"/>
+    </swiper-slide>
+    <swiper-slide v-for="(image) in largeImages" :key="image.UrlSecure" class="hidden sm:block">
+      <img :src="image.UrlSecure" class="mx-auto"/>
     </swiper-slide>
   </swiper-container>
 </template>
@@ -27,10 +30,11 @@
     const mediaItems = [...new Set(allImages.map(item => item.MediaItems))]
 
     // const smallImages = [...new Set(mediaItems.map(item => item[1]))]
-    // const mediumImages = [...new Set(mediaItems.map(item => item[2]))]
+    const mediumImages = [...new Set(mediaItems.map(item => item[2]))]
     const largeImages = [...new Set(mediaItems.map(item => item[3]))]
 
       return {
+        mediumImages,
         largeImages
       };
     }

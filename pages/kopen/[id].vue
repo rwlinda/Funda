@@ -21,14 +21,14 @@
           {{ homedetails.VolledigeOmschrijving }}
           </div>
         </div>
-      <aside class="border-t border-gray-600 sm:border-t-0 col-span-4">Aside</aside> 
+      <aside class="border-t border-gray-600 md:border-t-0 col-span-4 pt-4 md:pt-0 mt-4">Aside</aside> 
       </div>   
     </section>
       <!--END home details -->
 
       <!--START google map -->
       <section class="mt-8 border-t border-primary">  
-        <h2 class="py-2">Locatie</h2>
+        <h2 class="py-2 px-4 sm:px-0">Locatie</h2>
         <google-map :x="homedetails.WGS84_X" :y="homedetails.WGS84_Y" />
       </section>
       <!--END google map -->
@@ -40,7 +40,7 @@
 const route = useRoute()
 const { data:homedetails, loading, error } = await useFetch(`/api/homes/${route.params.id}`)
 
-const title = homedetails.value.Adres + homedetails.value.Postcode + homedetails.value.Plaats
+const title = homedetails.value.Adres + ' ' +  homedetails.value.Postcode + ' ' + homedetails.value.Plaats
 
 // This will be reactive when you change title/description above
 useHead({
