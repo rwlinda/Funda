@@ -12,7 +12,7 @@
 ```bash
 - toevoegen unit test - https://nuxt.com/docs/getting-started/testing
 - custom marker google maps
-- scrset in imagegallery/swiper
+- scrset in imagegallery/swiper (responsiveness verbeteren)
 - pagination zoekresultaten
 - Typescript toevoegen
 - customizen swiper pagination/navigation
