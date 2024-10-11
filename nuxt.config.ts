@@ -29,7 +29,6 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
-    NUXT_FUNDA_KEY_SECRET: process.env.NUXT_FUNDA_KEY_SECRET,
-    NUXT_GOOGLE_KEY_SECRET: process.env.NUXT_GOOGLE_KEY_SECRET
+    fundaKeySecret: process.env.NUXT_FUNDA_KEY_SECRET || '76666a29898f491480386d966b75f949'
   },
 })
