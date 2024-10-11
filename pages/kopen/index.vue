@@ -47,13 +47,5 @@
 
 <script setup>
 const { data:homes, loading, error } = await useFetch('/api/homes')
-
-// WISHLIST:     
-//     - toevoegen unit test - https://nuxt.com/docs/getting-started/testing
-//     - custom marker google maps
-//     - scrset in imagegallery/swiper
-//     - pagination zoekresultaten
-//     - Typescript
-//     - customizen swiper pagination/navigation
-    
+// pick gebruiken zodat niet alle data teruggegeven wordt    
 </script>

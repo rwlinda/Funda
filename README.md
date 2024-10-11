@@ -6,7 +6,18 @@
 - gebruik 'npm install' voor het downloaden en installeren van alle dependencies
 - daarna 'npm run dev' voor het lokaal draaien van de code
 - de app is nu zichtbaar in de browser op localhost:3000
-````
+```
+
+# Verbeterpunten
+```bash
+- toevoegen unit test - https://nuxt.com/docs/getting-started/testing
+- custom marker google maps
+- scrset in imagegallery/swiper
+- pagination zoekresultaten
+- Typescript toevoegen
+- customizen swiper pagination/navigation
+```
+
 
 ## Original Setup
 
