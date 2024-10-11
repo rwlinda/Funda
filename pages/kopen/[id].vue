@@ -12,7 +12,7 @@
     <!--END hero images / slider-->  
 
     <!--START home detals -->   
-    <section> 
+    <section class="px-4 sm:px-0"> 
       <h1 class="mt-4">{{ homedetails.Adres }}</h1>
       <div class="md:grid md:grid-cols-12 md:gap-8 mt-4">
         <div class="col-span-8">
@@ -21,8 +21,8 @@
           {{ homedetails.VolledigeOmschrijving }}
           </div>
         </div>
-      </div>
-      <aside class="col-span-4">Aside</aside>    
+      <aside class="border-t border-gray-600 sm:border-t-0 col-span-4">Aside</aside> 
+      </div>   
     </section>
       <!--END home details -->
 
