@@ -1,8 +1,14 @@
-# Nuxt 3 Minimal Starter
+# Project binnenhalen en starten
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+```bash
+- Clone project
+- Gebruik een terminal en navigeer naar de cloned repo
+- gebruik 'npm install' voor het downloaden en installeren van alle dependencies
+- daarna 'npm run dev' voor het lokaal draaien van de code
+- de app is nu zichtbaar in de browser op localhost:3000
+````
 
-## Setup
+## Original Setup
 
 Make sure to install the dependencies:
 
@@ -73,3 +79,7 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Nuxt 3 Minimal Starter
+
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
