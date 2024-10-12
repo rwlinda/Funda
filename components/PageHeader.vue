@@ -35,6 +35,12 @@ let menuVisible = ref(false)
 
 function toggleMenu() {
   menuVisible.value = !menuVisible.value
+  if(menuVisible.value === true) {
+    document.body.style.overflow = "hidden"
+  }
+  else {
+    document.body.style.overflow = "auto"
+  }
 }
 
 </script>
