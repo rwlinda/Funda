@@ -31,7 +31,6 @@ export default defineComponent( {
     // const mediumImages = [...new Set(mediaItems.map(item => item[2]))]
     const largeImages = [...new Set(mediaItems.map(item => item[3]))]
 
-    console.log(largeImages.length)
     const mainOptions = {
       pagination: false,
       height:'100vh',
