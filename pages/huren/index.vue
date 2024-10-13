@@ -1,5 +1,6 @@
 <template>
-  <div class="container mx-auto">
+  <section class="container mx-auto mt-8">
     <h1>Huren</h1>
-  </div>
+    <gallery-element></gallery-element>
+  </section>
 </template>
