@@ -1,6 +1,7 @@
 <template>
   <div v-if="isOpen" class="fixed w-screen z-10 top-0 left-0 bg-white flex flex-col">
-  <header class="h-12 flex justify-end px-4">
+  <header class="h-12 flex justify-between items-center px-4">
+    <span>{{ NumberOfImages }} foto's</span>
     <button
       @click="emit('modal-close')"
         class="hover:cursor-pointer
@@ -27,7 +28,7 @@ const props = defineProps({
     default: false
   }
 })
-
+const NumberOfImages = props.images.length
 const emit = defineEmits(["modal-close"]);
 
 
