@@ -1,25 +1,19 @@
 <template>
-  <swiper-container
-    :slides-per-view="1"
-    :centered-slides="true"
-    :navigation="true"
-    :pagination="true">
-    <swiper-slide v-for="(image) in mediumImages" :key="image.UrlSecure" class="sm:hidden">
-      <img :src="image.UrlSecure" class="mx-auto"/>
-    </swiper-slide>
-    <swiper-slide v-for="(image) in largeImages" :key="image.UrlSecure" class="hidden sm:block">
-      <img :src="image.UrlSecure" class="mx-auto"/>
-    </swiper-slide>
-  </swiper-container>
+  <Splide :options="mainOptions" aria-label="Alle foto's" class="size-full">
+    <SplideSlide v-for="(image, index) in largeImages" :key="index" class="sm:px-16 mt-11">
+      <img :src="image.Url" class="mx-auto max-h-full" />
+    </SplideSlide>
+  </Splide>
 </template>
 
 <script>
-  import { register } from 'swiper/element/bundle';
+import { Splide, SplideSlide } from '@splidejs/vue-splide';
+import { defineComponent } from 'vue';
+import '@splidejs/splide/css/skyblue';
 
-  register();
-
-  export default {
-    props: {
+export default defineComponent( {
+  components: { Splide, SplideSlide },
+  props: {
       images: {
         type: Array,
         required: true
@@ -29,14 +23,34 @@
     const allImages = props.images
     const mediaItems = [...new Set(allImages.map(item => item.MediaItems))]
 
+    // const imageset = (size) => {
+    //   [...new Set(mediaItems.map(item => item[size]))]
+    // }
+
     // const smallImages = [...new Set(mediaItems.map(item => item[1]))]
-    const mediumImages = [...new Set(mediaItems.map(item => item[2]))]
+    // const mediumImages = [...new Set(mediaItems.map(item => item[2]))]
     const largeImages = [...new Set(mediaItems.map(item => item[3]))]
 
+    const mainOptions = {
+      pagination: false,
+      height:'100vh',
+      arrows:true,
+      breakpoints: {
+        560: {
+          arrows:false
+        },
+      },
+    };
+
+
       return {
-        mediumImages,
-        largeImages
+        // mediumImages,
+        largeImages,
+        mainOptions
       };
     }
-  }
+} );
+
+// TODO: create srcset of images 
+
 </script>

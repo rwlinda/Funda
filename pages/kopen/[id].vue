@@ -42,7 +42,6 @@ const { data:homedetails, loading, error } = await useFetch(`/api/homes/${route.
 
 const title = homedetails.value.Adres + ' ' +  homedetails.value.Postcode + ' ' + homedetails.value.Plaats
 
-// This will be reactive when you change title/description above
 useHead({
   title
 })
@@ -62,11 +61,6 @@ const closeModal = () => {
   isModalOpened.value = false;
   document.body.style.overflow = "auto"
 };
-
-
-// TODO: return array with all large/medium/small images instead of using styling
-// filter set of images based on category (category means small/medium/large etc).
-// create srcset of images
 
 
 </script>

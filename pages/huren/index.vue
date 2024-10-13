@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto">
+  <section class="container mx-auto mt-8">
     <h1>Huren</h1>
-  </div>
+  </section>
 </template>
